@@ -5,12 +5,12 @@ import os
 
 class Test_Day03(unittest.TestCase):
     def test_part1(self):
-        path = os.path.abspath("tests/inputs/day03")
+        path = os.path.abspath("tests/inputs/day03.txt")
         sum = task.get_sum_of_parts(path)
         self.assertEqual(4361, sum)
 
     def test_part2(self):
-        path = os.path.abspath("tests/inputs/day03")
+        path = os.path.abspath("tests/inputs/day03.txt")
         gear_ratio = task.get_gear_ratio(path)
         self.assertEqual(467835, gear_ratio)
 

@@ -45,8 +45,8 @@ def replace_numbers(line: str):
 def run_day():
     basics.ensure_directory(os.path.dirname(__file__))
     print("Day01")
-    print("\tPart1: " + str(read_simple_calibration_sum_from_file("input")))
-    print("\tPart2: " + str(read_calibration_sum_from_file("input")))
+    print("\tPart1: " + str(read_simple_calibration_sum_from_file("input.txt")))
+    print("\tPart2: " + str(read_calibration_sum_from_file("input.txt")))
 
 
 if __name__ == "__main__":

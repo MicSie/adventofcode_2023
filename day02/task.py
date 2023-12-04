@@ -44,8 +44,8 @@ def get_power(fileName: str) -> int:
 def run_day():
     basics.ensure_directory(os.path.dirname(__file__))
     print("Day02")
-    print(f"\tPart1: {get_possible_sum('input', (14, 13, 12))}")
-    print(f"\tPart2: {get_power('input')}")
+    print(f"\tPart1: {get_possible_sum('input.txt', (14, 13, 12))}")
+    print(f"\tPart2: {get_power('input.txt')}")
 
 
 if __name__ == "__main__":

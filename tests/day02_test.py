@@ -5,12 +5,12 @@ import os
 
 class Test_Day02(unittest.TestCase):
     def test_part1(self):
-        path = os.path.abspath("tests/inputs/day02")
+        path = os.path.abspath("tests/inputs/day02.txt")
         sum = task.get_possible_sum(path, (14, 13, 12))  # b,g,r
         self.assertEqual(8, sum)
 
     def test_part2(self):
-        path = os.path.abspath("tests/inputs/day02")
+        path = os.path.abspath("tests/inputs/day02.txt")
         power = task.get_power(path)
         self.assertEqual(2286, power)
 
