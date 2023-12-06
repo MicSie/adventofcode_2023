@@ -191,8 +191,8 @@ def run_day():
     basics.ensure_directory(os.path.dirname(__file__))
     lines = basics.read_file("input.txt")
     mapping = Mapping(lines)
-    print(f"\tPart1: {mapping.get_lowest_location_simple()}")  # 165788812 ok
-    print(f"\tPart2: {mapping.get_lowest_location_range()}")  # 495084062 to high
+    print(f"\tPart1: {mapping.get_lowest_location_simple()}")
+    print(f"\tPart2: {mapping.get_lowest_location_range()}")
 
 
 if __name__ == "__main__":
