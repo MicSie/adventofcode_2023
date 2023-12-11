@@ -6,10 +6,5 @@ def read_file(file_name: str, strip_space: bool = True) -> list[str]:
         return [line.strip() if strip_space else line.strip("\n") for line in file]
 
 
-def ensure_directory(directory: str):
-    if os.path.basename(os.getcwd()).lower() != directory.lower():
-        os.chdir(directory)
-
-
 def are_ranges_intersecting(base: tuple[int, int], target: tuple[int, int]) -> bool:
     return base[0] <= target[1] and base[1] >= target[0]

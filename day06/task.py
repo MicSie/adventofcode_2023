@@ -40,8 +40,8 @@ def beat_record(input: list[tuple[int, int]]) -> int:
 
 
 def run_day():
-    basics.ensure_directory(os.path.dirname(__file__))
-    lines = basics.read_file("input.txt")
+    file = os.path.join(os.path.abspath(os.path.dirname(__file__)), "input.txt")
+    lines = basics.read_file(file)
     print("Day06")
     print(f"\tPart1: {beat_record(get_times_distances(lines))}")
     print(f"\tPart2: {get_options_count(get_time_distance(lines))}")

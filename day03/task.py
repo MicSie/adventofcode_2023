@@ -103,10 +103,10 @@ def get_gear_ratio(fileName: str) -> int:
 
 
 def run_day():
-    basics.ensure_directory(os.path.dirname(__file__))
+    file = os.path.join(os.path.abspath(os.path.dirname(__file__)), "input.txt")
     print("Day03")
-    print(f"\tPart1: {get_sum_of_parts('input.txt')}")
-    print(f"\tPart2: {get_gear_ratio('input.txt')}")
+    print(f"\tPart1: {get_sum_of_parts(file)}")
+    print(f"\tPart2: {get_gear_ratio(file)}")
 
 
 if __name__ == "__main__":

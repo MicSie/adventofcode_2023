@@ -25,8 +25,8 @@ def predict(line: list[int], future: bool) -> int:
 
 
 def run_day():
-    basics.ensure_directory(os.path.dirname(__file__))
-    lines = basics.read_file("input.txt")
+    file = os.path.join(os.path.abspath(os.path.dirname(__file__)), "input.txt")
+    lines = basics.read_file(file)
     print("Day09")
     print(f"\tPart1: {sum([predict(line, True) for line in parse(lines)])}")
     print(f"\tPart2: {sum([predict(line, False) for line in parse(lines)])}")

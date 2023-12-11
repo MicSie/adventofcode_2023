@@ -47,8 +47,8 @@ def count_steps(
 
 
 def run_day():
-    basics.ensure_directory(os.path.dirname(__file__))
-    data = parse(basics.read_file("input.txt"))
+    file = os.path.join(os.path.abspath(os.path.dirname(__file__)), "input.txt")
+    data = parse(basics.read_file(file))
     print("Day08")
     print(f"\tPart1: {count_steps(data[0],data[1], 'AAA', 'ZZZ')}")
     print(f"\tPart2: {count_all_steps(data, 'A', 'Z')}")

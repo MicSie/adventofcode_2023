@@ -188,8 +188,8 @@ def compress_ranges(ranges: set[range]) -> set[range]:
 
 def run_day():
     print("Day05")
-    basics.ensure_directory(os.path.dirname(__file__))
-    lines = basics.read_file("input.txt")
+    file = os.path.join(os.path.abspath(os.path.dirname(__file__)), "input.txt")
+    lines = basics.read_file(file)
     mapping = Mapping(lines)
     print(f"\tPart1: {mapping.get_lowest_location_simple()}")
     print(f"\tPart2: {mapping.get_lowest_location_range()}")

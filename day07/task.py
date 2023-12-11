@@ -112,8 +112,8 @@ def get_winnings(lines: list[str], is_jocker_wildcard: bool) -> int:
 
 
 def run_day():
-    basics.ensure_directory(os.path.dirname(__file__))
-    lines = basics.read_file("input.txt")
+    file = os.path.join(os.path.abspath(os.path.dirname(__file__)), "input.txt")
+    lines = basics.read_file(file)
     print("Day07")
     print(f"\tPart1: {get_winnings(lines, False)}")
     print(f"\tPart2: {get_winnings(lines, True)}")
