@@ -6,12 +6,12 @@ import os
 def sum_mirror_lines_with_error(data: list[list[str]], error: int = 1) -> int:
     result = 0
     for pattern in data:
+        rotated = rotate(pattern)
         line = find_mirror_line_with_error(rotated, error)
         if line != None:
             result += line
             continue
 
-        rotated = rotate(pattern)
         line = find_mirror_line_with_error(pattern, error)
         if line != None:
             result += line * 100
